@@ -43,7 +43,7 @@ struct renderer {
   GLuint cTex=0;
   GLuint nTex=0;
   GLuint fbo=0;
-  GLint mode=1;
+  GLint mode=0;
 
   renderer() = default;
   

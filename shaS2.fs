@@ -30,7 +30,7 @@ void main()
       FragColor = vec4(z,z,z,1);
     else {
     */
-      if(mode == 1) {
+      if(mode == 0 || mode == 1) {
         int avg=1;
         vec3 na=vec3(0,0,0);
         for(int j=-avg;j<avg+1;j++) {
@@ -47,14 +47,23 @@ void main()
           }
         }
         na = normalize(na);
-
-        float s = dot(light, na);
-        s = s > 0 ? s*s : 0;
-        FragColor = c * (s * 0.75 + 0.25);
-      } else {
+        if(mode == 1)
+          FragColor = vec4(na.x*.5+.5,na.y*.5+.5,na.z*.5+.5,1);
+        else {
+          float s = dot(light, na);
+          s = s > 0 ? s*s : 0;
+          FragColor = c * (s * 0.75 + 0.25);
+        }
+      } else if (mode == 2) {
         float s = dot(light, (n-h)*2);
         s = s > 0 ? s*s : 0;
         FragColor = c * (s * 0.75 + 0.25);
+      } else if (mode == 3) {
+        FragColor = c;
+      } else if (mode == 4) {
+        FragColor = vec4(n.x,n.y,n.z,1);
+      } else if (mode == 5) {
+        FragColor = vec4(z,z,z,1);
       }
     //}
 }

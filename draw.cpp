@@ -162,7 +162,7 @@ static void mouse_button_callback(GLFWwindow* window, int button, int action, in
     r->mouse_state = renderer::e_mouse_state::PAN;
 
   if (button == GLFW_MOUSE_BUTTON_RIGHT && action == GLFW_PRESS) {
-    r->mode = r->mode + 1 == 2 ? 0 : r->mode + 1;
+    r->mode = r->mode + 1 == 6 ? 0 : r->mode + 1;
     r->mouse_state = renderer::e_mouse_state::DRAWMASK;
     double xpos, ypos;
     glfwGetCursorPos(window, &xpos, &ypos);
