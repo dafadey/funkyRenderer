@@ -28,7 +28,7 @@ int main(int argc, char* argv[]) {
   glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);            // Required on Mac
   
   // Create window with graphics context
-  GLFWwindow* window = glfwCreateWindow(800, 600, "dicom2stl", NULL, NULL);
+  GLFWwindow* window = glfwCreateWindow(800, 600, "funky renderer example", NULL, NULL);
   if (window == NULL) {
     std::cerr << "interface::init: ERROR: failed to create glfw window\n";
     return false;
