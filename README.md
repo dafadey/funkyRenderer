@@ -8,6 +8,9 @@ The basic idea is to used rasterization *pure* 2d output like color buffe (regua
 Simple? It looks so, but there are some problems on *falling* edges. If edge is not continous (i.e. threre is a gap in z-buffer on that edge) you have to be very accurate with smoothing, otherwise result will look really weird. sortf guling something that outght to have a distance. <br>
 Anyway all that stuff is actually processed in a second stage fragment shader, while in host code you need just to run two stage rendering (i.e. first render your 3d VBO+VAO to texture and then render your texture to some flat quad covering the screen)
 
+## Dependencies
+You need libglfw3-dev, libglew-dev and opengl development files.
+
 ## Build
 As simple as
 ```
