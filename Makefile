@@ -1,5 +1,4 @@
 EXE = funky
-BASE_PATH = /home/dan
 SOURCES = main.cpp geo.cpp draw.cpp OGLitem.cpp timer.cpp
 OBJS = $(addsuffix .o, $(basename $(notdir $(SOURCES))))
 UNAME_S := $(shell uname -s)
